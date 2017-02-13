@@ -1,3 +1,5 @@
+#setwd("~/Desktop/DataAnalysis/Coursera - Data cleansing/Final")
+
 require(readr)
 require(dplyr)
 #Download file from website
@@ -113,4 +115,4 @@ write.table(nX,"./merged/results.txt", row.name=FALSE)
 nXa <- group_by(nX, subject, activity)
 nXa <- summarise_each(nXa, funs(mean))
 
-write.table(nX,"./merged/summary.txt", row.name=FALSE)
+write.table(nXa,"./merged/summary.txt", row.name=FALSE)
